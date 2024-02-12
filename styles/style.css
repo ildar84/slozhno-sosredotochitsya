@@ -2,18 +2,22 @@
 
 .page {
   font-family: var(--accent-font, "IBM Plex Mono");
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; 
 }
 
 
 .header {
   position: relative;
   display: grid;
+  grid-template-rows: 1fr auto 1fr auto;
   padding: 20px;
   block-size: max(100vb, 668px);
-  background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  block-size: cover;
+  justify-items: end;
+  align-items: start;
   
 }
 
@@ -22,8 +26,8 @@ position: absolute;
 display: flex;
 gap: 10px;
 align-items: center;
-inset-block-start: 0;
-inset-inline-end: 0;
+inset-block-start: 20px;
+inset-inline-end: 20px;
 color:  var(--accent-color, #FF0070);
 font-family: var(--accent-font, "IBM Plex Mono");
 font-size: 18px;
@@ -41,20 +45,35 @@ background-color: var(--accent-color, #FF0070);
 
 }
 
-.decorated-zone ::before {
+.header::before {
 content: '';
 position: absolute;
+display: block;
 inline-size: 25px;
 block-size: 25px;
-border-top: 1px solid #FF0070;
-border-right: 1px solid #FF0070;
-inset-block-start: 0;
-inset-inline-end: 0;
+border-top: 1px solid var(--accent-color, #FF0070);
+border-right: 1px solid var(--accent-color, #FF0070);
+inset-block-start: 20px;
+inset-inline-end: 10px;
 
 
 }
 
+/* .header::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+  inset-block-start: 20px;
+  inset-inline-end: 20px;
+  
+  
+  } */
+
 .header__title {
+justify-self: start;
 color: var(--header-title-color, #DB00FF);
 text-shadow: 4px 4px 0px #FF0070;
 text-shadow: 4px 4px 0 var(--accent-color);
@@ -63,4 +82,15 @@ font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 font-style: normal;
 font-weight: 700;
 line-height: 82.5%;
+}
+
+.header__text {
+  color: #000028;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  max-inline-size: 491px;
+  background-color: var(--accent-color, #FF0070); 
 }
