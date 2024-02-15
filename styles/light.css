@@ -9,4 +9,19 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-font: "IBM Plex Mono", sans-serif;
+  --header-menu-color: #353430;
+  --header-text-color: #353430;
+  --main-title-color: #353430;
+  --main-subtitle-color: #353430;
+  --main-subtitle-background: #FF8DCB;
+  --main-text-color: #353430;
+  --header-title-color: #FFC2E6;
+  --rec: none;
+  background-image: url(/images/cover-image-light.png);
+  
+  
 }
+
+  
+

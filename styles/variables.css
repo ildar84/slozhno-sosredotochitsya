@@ -4,9 +4,14 @@
 */
 :root {
   --accent-font: "IBM Plex Mono", sans-serif;
-  --main-text-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --title-color: #000028;
-  --header-title-color: #DB00FF;  
+  --header-menu-color: #353430;
+  --header-text-color: #353430;
+  --main-title-color: #353430;
+  --main-subtitle-color: #353430;
+  --main-subtitle-background: #FF8DCB;
+  --main-text-color: #353430;
+  --header-title-color: #FFC2E6;
+  --rec: none;
+   
 }
 
