@@ -9,7 +9,6 @@
   background-attachment: fixed; 
 }
 
-
 .header {
   position: relative;
   display: grid;
@@ -26,8 +25,8 @@
   display: block;
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid var(--header-menu-color);
-  border-right: 1px solid var(--header-menu-color);
+  border-top: 1px solid var(--header-menu-color, #353430);
+  border-right: 1px solid var(--header-menu-color, #353430);
   inset-block-start: 20px;
   inset-inline-end: 20px;
 }
@@ -36,8 +35,8 @@
   content: '';
   position: absolute;
   display: block;
-  border-left: 1px solid var(--header-menu-color);
-  border-bottom: 1px solid var(--header-menu-color);
+  border-left: 1px solid var(--header-menu-color, #353430);
+  border-bottom: 1px solid var(--header-menu-color, #353430);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-start: 20px;
@@ -51,7 +50,7 @@
   align-items: center;
   inset-block-start: 20px;
   inset-inline-end: 20px;
-  color:  var(--header-menu-color);
+  color:  var(--header-menu-color, #353430);
   font-family: var(--accent-font, "IBM Plex Mono");
   font-size: 18px;
   font-style: normal;
@@ -59,20 +58,19 @@
   line-height: 25px;
 }
 
-
-
 .header__decor-element::after {
   content: '';
   width: 9px;
   height: 9px;
   border-radius: 100%;
-  background-color: var(--header-menu-color);
+  background-color: var(--header-menu-color, #353430);
   margin-right: 8px;
 }
 
 .header__theme-menu {
   justify-self: center;
   margin-block-start: 10px;
+  margin-left: 10px;
 }
 
 .header__theme-menu-list {
@@ -82,7 +80,7 @@
 
 .header__theme-menu-button {
   border: none;
-  color: var(--header-menu-color);
+  color: var(--header-menu-color, #353430);
   text-align: center;
   font-family: var(--accent-font, "IBM Plex Mono");
   font-size: 18px;
@@ -96,7 +94,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--header-menu-color);
+  outline: 1px solid var(--header-menu-color, #353430);
 }
 
 .header__theme-menu-button:focus {
@@ -104,17 +102,17 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--header-menu-color);;
+  border-bottom: 1px solid var(--header-menu-color, #353430);;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--header-menu-color);
+  outline: 1px solid var(--header-menu-color, #353430);
   pointer-events: none;
 }
 
 .decor__title {
   justify-self: start;
-  color: var(--header-title-color);
+  color: var(--header-title-color, #353430);
   text-shadow: 4px 4px 0 #FF0070;
   font-family: var(--accent-font, "IBM Plex Mono");
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
@@ -131,7 +129,7 @@
   font-weight: 700;
   line-height: 23.4px;
   max-inline-size: 491px;
-  background-color: var(--main-subtitle-background);
+  background-color: var(--main-subtitle-background, #FF8DCB);
   margin-block-start: 115px;
   margin-inline-end: 12px; 
 }
@@ -146,12 +144,12 @@
 .main__section {
   display: grid;
   gap: 20px;
-  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .main__title {
-  color: var(--main-title-color);
-  font-family: var(--accent-font);
+  color: var(--main-title-color, #353430);
+  font-family: var(--accent-font, "IBM Plex Mono");
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -185,15 +183,14 @@
   grid-column: 2/4;
 }
 
-
 .title-decor {
-  color: var(--main-subtitle-color);
-  font-family: var(--accent-font);
+  color: var(--main-subtitle-color, #353430);
+  font-family: var(--accent-font, "IBM Plex Mono");
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-  background-color: var(--main-subtitle-background);
+  background-color: var(--main-subtitle-background,#FF8DCB);
 }
 
 .recomendation__weight {
@@ -201,8 +198,8 @@
 }
 
 .main__text {
-  color: var(--main-text-color);
-  font-family: var(--accent-font);
+  color: var(--main-text-color,#353430);
+  font-family: var(--accent-font, "IBM Plex Mono");
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -247,19 +244,21 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   block-size: max(95vb, 668px);
+  margin: 20px;
   padding-top: 5px;
 }
 
 .footer .decor__title {
   justify-self: center;
   align-self: center;
-  color: var(--header-title-color);
+  color: var(--header-title-color,#353430);
   text-shadow: 2px 2px 0px #FF0070;
-  font-family: "IBM Plex Mono";
+  font-family:  var(--accent-font, "IBM Plex Mono");
   font-size: 157px;
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
+  padding-top: 3px;
 }
 
 .footer::before {
@@ -268,15 +267,15 @@
   justify-self: end;
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid var(--header-menu-color);
-  border-right: 1px solid var(--header-menu-color);
+  border-top: 1px solid var(--header-menu-color,#353430);
+  border-right: 1px solid var(--header-menu-color, #353430);
 }
   
 .footer::after {
   content: '';
   display: block;
-  border-left: 1px solid var(--header-menu-color);
-  border-bottom: 1px solid var(--header-menu-color);
+  border-left: 1px solid var(--header-menu-color,#353430);
+  border-bottom: 1px solid var(--header-menu-color,#353430);
   block-size: 25px;
   inline-size: 25px;
 }
@@ -289,7 +288,6 @@
     }
    
     .header__theme-menu-list {
-      display: flex;
       flex-direction: column;
       gap: 11px;
       padding-block-start: 174px;
@@ -299,25 +297,126 @@
     }
     
     .header__text {
-      color: #000028;
-      font-family: var(--accent-font, "IBM Plex Mono");
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 23.4px;
       max-inline-size: 364px;
-      background-color: var(--main-subtitle-background);
       margin-block-start: 163px;
       margin-inline-end: 10px; 
     }
-    /* .title-decor {
-      padding-inline-start: 6px; 
-    } */
-    /* .main__article {
+   
+    .main__section {
       grid-template-columns: 236px 1fr 1fr;
-    } */
-    /* .main__text {
-      padding-inline-start: 6px; 
-    } */
-  }
+    }
+
+    .factors .main__article {
+      grid-column: span 3;
+      grid-row: span 3;
+    }
+
+    .footer .decor__title {
+      font-size: 120px;
+    }
+
+    .gallery {
+      grid-template-rows: auto 192px 230px 318px;
+    }
+
+    .footer {
+      block-size: max(96vb, 668px);
+      padding-top: 0;
+    }
+
+    .footer .decor__title {
+      padding-top: 4px;
+    }
+  } 
 }
+
+@media (width < 768px) {
+    .header {
+      padding: 0;
+    }
+
+    .header__decor-element {
+      inset-block-start: 11px;
+      inset-inline-end: 11px;
+    }
+    
+    .header::before {
+      inset-block-start: 11px;
+      inset-inline-end: 10px;
+    }
+      
+    .header::after {
+      inset-inline-start: 10px;
+      inset-block-end: 10px;
+    }
+  
+    .header__theme-menu {
+      justify-self: right;
+    }
+   
+    .header__theme-menu-list {
+      flex-direction: column;
+      gap: 11px;
+      padding-block-start: 67px;
+      padding-inline-end: 13px;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .decor__title {
+      margin-top: 1px;
+      margin-left: 11px;
+      font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    }
+        
+    .header__text {
+      max-inline-size: 355px;
+      margin-block-start: 55px;
+      margin-inline-end: 10px; 
+    }
+
+    .main {
+      padding: 40px 10px;
+      gap: 50px;
+    }
+   
+    .main__section {
+      grid-template-columns: 1fr;
+    }
+
+    .main__subtitle {
+      grid-column: span 3;
+    }
+
+    .factors .main__article, .reasons .main__article, .recomendations .main__article {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    .recomendations .main__title {
+      grid-column: span 3;
+    }
+
+    .gallery {
+      grid-template-rows: auto 142px 355px 237px 355px 237px;
+      gap: 10px;
+    }
+
+    .gallery__img:nth-of-type(1), .gallery__img:nth-of-type(2), .gallery__img:nth-of-type(3),
+    .gallery__img:nth-of-type(4), .gallery__img:nth-of-type(5) {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    .footer {
+      block-size: max(95vb, 646px);
+      margin: 10px;
+      padding-top: 0;
+    }
+
+    .footer .decor__title {
+      font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+      margin-top: 0;
+      margin-left: 0;
+    }
+  } 
