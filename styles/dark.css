@@ -14,11 +14,15 @@
     --main-text-color: #F1B2CE;
     --header-title-color: #DB00FF; 
     --rec: flex;
-    
+    --bg-color: #000028;
+    --header-menu-button-hover: rgba(255, 0, 112, 0.40);
+    --main-text-link: #FF0070;
+    --decor-title-shadow: #FF0070;
+    --main-text-link-border: #F1B2CE;
   }
 
   .page {
-    background-image: url(../images/cover-image-dark.png);
+    background-image: var(--bg-img);
   }
 
 
@@ -38,5 +42,11 @@
   --main-text-color: #F1B2CE;
   --header-title-color: #DB00FF;
   --rec: flex; 
-  background-image: url(../images/cover-image-dark.png);  
+  --bg-img: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --header-menu-button-hover: rgba(255, 0, 112, 0.40);
+  --main-text-link: #FF0070;
+  --decor-title-shadow: #FF0070;
+  --main-text-link-border: #F1B2CE;
+  
 }

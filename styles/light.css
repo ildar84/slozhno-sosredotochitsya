@@ -18,9 +18,12 @@
   --main-text-color: #353430;
   --header-title-color: #FFC2E6;
   --rec: none;
-  background-image: url(../images/cover-image-light.png);
-  
-  
+  --bg-img: url(../images/cover-image-light.png);
+  --bg-color: #FFF1F7;
+  --header-menu-button-hover: rgba(50, 49, 45, 0.40);
+  --main-text-link: #FF8DCB;
+  --decor-title-shadow: #FF8DCB;
+  --main-text-link-border: #353430;
 }
 
   
